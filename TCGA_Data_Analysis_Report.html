@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TCGA Data Analysis Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: auto; }
+        img { width: 100%; height: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>TCGA Data Analysis Report</h1>
+    
+    <h2>2.1 Distribution of TPMs Expression</h2>
+    
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TRO</th>
+      <td>169.0</td>
+      <td>34.700905</td>
+      <td>24.909444</td>
+      <td>6.6257</td>
+      <td>19.8400</td>
+      <td>30.4609</td>
+      <td>40.8204</td>
+      <td>210.2504</td>
+    </tr>
+    <tr>
+      <th>NDN</th>
+      <td>169.0</td>
+      <td>67.906123</td>
+      <td>75.354135</td>
+      <td>2.1603</td>
+      <td>11.4731</td>
+      <td>49.0250</td>
+      <td>111.6508</td>
+      <td>713.4826</td>
+    </tr>
+    <tr>
+      <th>NSMCE3</th>
+      <td>169.0</td>
+      <td>21.505401</td>
+      <td>6.276264</td>
+      <td>8.8170</td>
+      <td>17.4191</td>
+      <td>21.3185</td>
+      <td>24.4228</td>
+      <td>43.0047</td>
+    </tr>
+    <tr>
+      <th>MAGEC2</th>
+      <td>169.0</td>
+      <td>1.376357</td>
+      <td>10.909120</td>
+      <td>0.0000</td>
+      <td>0.0340</td>
+      <td>0.0762</td>
+      <td>0.1810</td>
+      <td>137.8583</td>
+    </tr>
+    <tr>
+      <th>MAGEB2</th>
+      <td>169.0</td>
+      <td>0.051341</td>
+      <td>0.178642</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0521</td>
+      <td>2.1626</td>
+    </tr>
+    <tr>
+      <th>MAGED2</th>
+      <td>169.0</td>
+      <td>332.688191</td>
+      <td>148.870570</td>
+      <td>151.8313</td>
+      <td>258.6481</td>
+      <td>304.9573</td>
+      <td>358.0033</td>
+      <td>1327.6170</td>
+    </tr>
+    <tr>
+      <th>MAGEB4</th>
+      <td>169.0</td>
+      <td>0.001377</td>
+      <td>0.006667</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0371</td>
+    </tr>
+    <tr>
+      <th>MAGEA9</th>
+      <td>169.0</td>
+      <td>0.016925</td>
+      <td>0.139242</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>1.3348</td>
+    </tr>
+    <tr>
+      <th>MAGEA10</th>
+      <td>169.0</td>
+      <td>0.008455</td>
+      <td>0.044131</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.4579</td>
+    </tr>
+    <tr>
+      <th>TRIM28</th>
+      <td>169.0</td>
+      <td>262.901669</td>
+      <td>112.424443</td>
+      <td>67.7215</td>
+      <td>177.1401</td>
+      <td>249.1353</td>
+      <td>325.5026</td>
+      <td>728.1331</td>
+    </tr>
+    <tr>
+      <th>MAGEA4</th>
+      <td>169.0</td>
+      <td>0.094802</td>
+      <td>1.108619</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>14.4109</td>
+    </tr>
+    <tr>
+      <th>MAGED4</th>
+      <td>169.0</td>
+      <td>2.262738</td>
+      <td>1.567896</td>
+      <td>0.3002</td>
+      <td>1.2164</td>
+      <td>2.0074</td>
+      <td>2.9564</td>
+      <td>14.6554</td>
+    </tr>
+    <tr>
+      <th>MAGEC1</th>
+      <td>169.0</td>
+      <td>0.221644</td>
+      <td>1.721479</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0197</td>
+      <td>0.0491</td>
+      <td>21.8384</td>
+    </tr>
+    <tr>
+      <th>MAGEA8</th>
+      <td>169.0</td>
+      <td>0.046152</td>
+      <td>0.116585</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0295</td>
+      <td>0.0593</td>
+      <td>1.4272</td>
+    </tr>
+    <tr>
+      <th>MAGEC3</th>
+      <td>169.0</td>
+      <td>0.201692</td>
+      <td>0.278890</td>
+      <td>0.0000</td>
+      <td>0.0403</td>
+      <td>0.1079</td>
+      <td>0.2606</td>
+      <td>1.9296</td>
+    </tr>
+    <tr>
+      <th>MAGEB6</th>
+      <td>169.0</td>
+      <td>0.027966</td>
+      <td>0.085592</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.7064</td>
+    </tr>
+    <tr>
+      <th>MAGEB18</th>
+      <td>169.0</td>
+      <td>0.002093</td>
+      <td>0.012322</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.1103</td>
+    </tr>
+    <tr>
+      <th>MAGEF1</th>
+      <td>169.0</td>
+      <td>141.682017</td>
+      <td>52.084861</td>
+      <td>51.4234</td>
+      <td>106.0579</td>
+      <td>131.5165</td>
+      <td>174.5683</td>
+      <td>417.6613</td>
+    </tr>
+    <tr>
+      <th>MAGEB10</th>
+      <td>169.0</td>
+      <td>0.001782</td>
+      <td>0.008144</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0521</td>
+    </tr>
+    <tr>
+      <th>MAGED1</th>
+      <td>169.0</td>
+      <td>279.355365</td>
+      <td>102.479218</td>
+      <td>79.1991</td>
+      <td>202.9127</td>
+      <td>267.8148</td>
+      <td>353.7751</td>
+      <td>671.2322</td>
+    </tr>
+    <tr>
+      <th>MAGEB17</th>
+      <td>169.0</td>
+      <td>0.471133</td>
+      <td>0.504943</td>
+      <td>0.0000</td>
+      <td>0.1716</td>
+      <td>0.3234</td>
+      <td>0.6318</td>
+      <td>3.8610</td>
+    </tr>
+    <tr>
+      <th>MAGEA2B</th>
+      <td>169.0</td>
+      <td>0.003592</td>
+      <td>0.016896</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.1834</td>
+    </tr>
+    <tr>
+      <th>MAGEA11</th>
+      <td>169.0</td>
+      <td>0.015346</td>
+      <td>0.064851</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.7190</td>
+    </tr>
+    <tr>
+      <th>MAGEE2</th>
+      <td>169.0</td>
+      <td>4.351368</td>
+      <td>5.108593</td>
+      <td>0.0297</td>
+      <td>0.3169</td>
+      <td>3.0050</td>
+      <td>6.7586</td>
+      <td>30.0814</td>
+    </tr>
+    <tr>
+      <th>MAGED4B</th>
+      <td>169.0</td>
+      <td>2.573648</td>
+      <td>1.524110</td>
+      <td>0.3283</td>
+      <td>1.4417</td>
+      <td>2.3048</td>
+      <td>3.4758</td>
+      <td>8.6341</td>
+    </tr>
+    <tr>
+      <th>MAGEH1</th>
+      <td>169.0</td>
+      <td>139.747415</td>
+      <td>78.654196</td>
+      <td>7.4429</td>
+      <td>84.5923</td>
+      <td>130.1653</td>
+      <td>175.2026</td>
+      <td>456.6449</td>
+    </tr>
+    <tr>
+      <th>MAGEB5</th>
+      <td>169.0</td>
+      <td>0.001207</td>
+      <td>0.011347</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.1251</td>
+    </tr>
+    <tr>
+      <th>MAGEB16</th>
+      <td>169.0</td>
+      <td>0.002446</td>
+      <td>0.010697</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0737</td>
+    </tr>
+    <tr>
+      <th>MAGEA6</th>
+      <td>169.0</td>
+      <td>0.121617</td>
+      <td>0.280785</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0438</td>
+      <td>0.0926</td>
+      <td>2.5816</td>
+    </tr>
+    <tr>
+      <th>MAGEA1</th>
+      <td>169.0</td>
+      <td>0.199083</td>
+      <td>1.594906</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0490</td>
+      <td>20.5321</td>
+    </tr>
+    <tr>
+      <th>MAGEB3</th>
+      <td>169.0</td>
+      <td>0.007295</td>
+      <td>0.025447</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.2133</td>
+    </tr>
+    <tr>
+      <th>CSAG1</th>
+      <td>169.0</td>
+      <td>4.165973</td>
+      <td>2.944719</td>
+      <td>0.0000</td>
+      <td>1.9401</td>
+      <td>3.3893</td>
+      <td>5.6788</td>
+      <td>18.1246</td>
+    </tr>
+    <tr>
+      <th>MAGEE1</th>
+      <td>169.0</td>
+      <td>9.369963</td>
+      <td>7.831843</td>
+      <td>0.2092</td>
+      <td>4.2959</td>
+      <td>8.3691</td>
+      <td>12.2601</td>
+      <td>62.1958</td>
+    </tr>
+    <tr>
+      <th>MAGEA12</th>
+      <td>169.0</td>
+      <td>1.349696</td>
+      <td>0.973297</td>
+      <td>0.0000</td>
+      <td>0.6480</td>
+      <td>1.1462</td>
+      <td>1.7528</td>
+      <td>5.6930</td>
+    </tr>
+    <tr>
+      <th>MAGEB1</th>
+      <td>169.0</td>
+      <td>0.010230</td>
+      <td>0.025068</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.1664</td>
+    </tr>
+    <tr>
+      <th>MAGEA3</th>
+      <td>169.0</td>
+      <td>0.165129</td>
+      <td>0.640966</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0403</td>
+      <td>0.0958</td>
+      <td>6.5522</td>
+    </tr>
+    <tr>
+      <th>MAGEA7P</th>
+      <td>169.0</td>
+      <td>0.004552</td>
+      <td>0.019571</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.1206</td>
+    </tr>
+    <tr>
+      <th>MAGEA5</th>
+      <td>169.0</td>
+      <td>0.001862</td>
+      <td>0.014376</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.1439</td>
+    </tr>
+    <tr>
+      <th>CSAG4</th>
+      <td>169.0</td>
+      <td>0.077508</td>
+      <td>0.108612</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.1111</td>
+      <td>0.6043</td>
+    </tr>
+    <tr>
+      <th>MAGEL2</th>
+      <td>169.0</td>
+      <td>3.807359</td>
+      <td>6.612708</td>
+      <td>0.1255</td>
+      <td>1.1691</td>
+      <td>2.3940</td>
+      <td>3.6042</td>
+      <td>68.1945</td>
+    </tr>
+    <tr>
+      <th>MAGEA9B</th>
+      <td>169.0</td>
+      <td>0.137654</td>
+      <td>1.708135</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>22.2028</td>
+    </tr>
+    <tr>
+      <th>MAGEA2</th>
+      <td>169.0</td>
+      <td>0.003274</td>
+      <td>0.011815</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0809</td>
+    </tr>
+    <tr>
+      <th>CSAG2</th>
+      <td>169.0</td>
+      <td>0.144398</td>
+      <td>1.024924</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0608</td>
+      <td>12.2318</td>
+    </tr>
+    <tr>
+      <th>CSAG3</th>
+      <td>169.0</td>
+      <td>0.442263</td>
+      <td>2.377070</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+      <td>0.0809</td>
+      <td>0.2205</td>
+      <td>30.0637</td>
+    </tr>
+  </tbody>
+</table>
+    
+    <p>Lorem ipsum placeholder for authors comments on 2.1 Distribution of TPMs Expression.</p>
+    
+    <h2>2.2 plot_gene_histograms_type1(Type1)</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240325_TCGA_GBM_Overview/240325_TCGA_GBM_ToPlots/type1_TPM_Expression_histogram.png" alt="2.2 plot_gene_histograms_type1(Type1)">
+    
+    <p>Lorem ipsum placeholder for authors comments on 2.2 plot_gene_histograms_type1(Type1).</p>
+    
+    <h2>2.3 plot_gene_histograms_type2(Type2)</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240325_TCGA_GBM_Overview/240325_TCGA_GBM_ToPlots/type2_TPM_Expression_histogram.png" alt="2.3 plot_gene_histograms_type2(Type2)">
+    
+    <p>Lorem ipsum placeholder for authors comments on 2.3 plot_gene_histograms_type2(Type2).</p>
+    
+    <h2>2.4 Composition of Positive and Negative Tumors by MAGEs</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240325_TCGA_GBM_Overview/240325_TCGA_GBM_ToPlots/MAGE_PosNeg_Composition.png" alt="2.4 Composition of Positive and Negative Tumors by MAGEs">
+    
+    <p>Lorem ipsum placeholder for authors comments on 2.4 Composition of Positive and Negative Tumors by MAGEs.</p>
+    
+    <h2>3.1 Correlation Graph</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240325_TCGA_GBM_Overview/240325_TCGA_GBM_ToPlots/MAGE_PearsonCorrelation_heatmap.png" alt="3.1 Correlation Graph">
+    
+    <p>Lorem ipsum placeholder for authors comments on 3.1 Correlation Graph.</p>
+    
+    <h2>3.2 Expression class graph</h2>
+    
+    <img src="" alt="3.2 Expression class graph">
+    
+    <p>Lorem ipsum placeholder for authors comments on 3.2 Expression class graph.</p>
+    
+    <h2>3.3 Heatmap</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240325_TCGA_GBM_Overview/240325_TCGA_GBM_ToPlots/SortedExpression_MAGEA1_Heatmap.png" alt="3.3 Heatmap">
+    
+    <p>Lorem ipsum placeholder for authors comments on 3.3 Heatmap.</p>
+    
+    <h2>3.4 Kaplan-Meier Graph</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240325_TCGA_GBM_Overview/240325_TCGA_GBM_ToPlots/Kaplan-Meier.png" alt="3.4 Kaplan-Meier Graph">
+    
+    <p>Lorem ipsum placeholder for authors comments on 3.4 Kaplan-Meier Graph.</p>
+    
+</div>
+</body>
+</html>

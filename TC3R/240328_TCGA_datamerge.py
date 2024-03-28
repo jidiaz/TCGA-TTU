@@ -4,6 +4,7 @@ import pandas as pd
 import datetime
 from functools import reduce
 import argparse
+from collections import Counter
 import json
 
 # Dynamically build the path to the config.json file
@@ -12,8 +13,7 @@ config_path = os.path.join(script_dir, 'config.json')  # Builds the path to conf
 # Load JSON configuration as default settings
 with open(config_path, 'r') as config_file:
     config = json.load(config_file)
-
-# Set up argparse with the ability to override JSON settings
+# example how to run it: 
 
 parser = argparse.ArgumentParser(description='Concatenates TCGA transcriptome raw counts files')
 parser.add_argument("-p", default=config['path_to_TCGA_files'], action='store', help='path to the TCGA files')
@@ -24,32 +24,68 @@ parser.add_argument("-o", default=config['output_path'], action='store', help='p
 
 args = parser.parse_args()
 clinical=pd.read_csv(args.d,sep='\t')
-sampleinfo=args.r
+sampleinfo=pd.read_csv(args.r,sep='\t')
 path=args.p
 folders=args.o
 name_change=args.n
 
-id=[]
-change=[]
 
+
+
+def rename_duplicates_in_column(df, column_name):
+    # Create a counter dictionary to track occurrences
+	counts = {}
+    # New column to store updated names
+	new_names = []
+	for name in df[column_name]:
+		name= name.split(",")[0]
+		if name in counts:
+			counts[name] += 1
+			new_name = str(name)+"-"+str(counts[name])
+		else:
+			counts[name] = 1
+			new_name = name
+		new_names.append(new_name)
+    
+    # Assign the list of new names to the original column
+	df[column_name] = new_names
+	return df
+
+# Rename duplicates in the 'Sample ID' column
+sampleinfo = rename_duplicates_in_column(sampleinfo, 'Sample ID')
+
+
+id=[]
+files_to_merge=[]
 if name_change:
 	for filename in os.listdir(path):
 		filename = filename.strip('\n')
 		id.append(filename)
 
-	for secu in sampleinfo:
-		change.append(secu)
-
 	for iname in id:
 		siname = iname.split('.rna')[0]
-		for fname in change:
-			if siname in fname:
-				z = fname.split('\t')[6]
-				j = z.split(",")
-				os.rename(path+iname, path+j[0])
+		for fname in sampleinfo.index:
+			code  = sampleinfo.at[fname, 'File Name']
+			sample_code = code.split('.rna_seq')[0]
+			if siname == sample_code:
+				if "Tumor" in sampleinfo.at[fname, 'Sample Type']:
+					z = sampleinfo.at[fname, 'Sample ID']
+					os.rename(path+iname, path+z)
+					files_to_merge.append(z)
+				elif "Normal" in sampleinfo.at[fname, 'Sample Type']:
+					z = sampleinfo.at[fname, 'Sample ID']
+					z=str(z)+str("-normal")
+					os.rename(path+iname, path+z)
+				else:
+					print("new category"+" "+str(z))
+			
+
 
 else:
-    print("No name change")
+	for filename in os.listdir(path):
+		filename = filename.strip('\n')
+		if "normal" not in filename:
+			files_to_merge.append(filename)
 
 
 #Date used to name output files
@@ -72,7 +108,6 @@ tpm_clinical={}
 raw_count={}
 # Initialize an empty list to keep track of skipped files
 skipped_files = []
-
 for filename in os.listdir(path):
     # Skip .DS_Store files
     if filename == '.DS_Store':
@@ -115,25 +150,12 @@ for filename in os.listdir(path):
         print(f"Error processing {filename}: {e}")
         skipped_files.append(filename)
 
-# Check if there are any skipped files and write them to a text file
-if skipped_files:
-    # Define the path for the skipped files text file within the output directory
-    skipped_files_path = os.path.join(folders + name_in_output, 'skipped_files.txt')
-    
-    # Write the names of the skipped files to the text file
-    with open(skipped_files_path, 'w') as f:
-        for file in skipped_files:
-            f.write(file + '\n')
-    
-    print(f"Skipped files list saved to {skipped_files_path}")
-
-
+#Merge files
 print("initializing merging process, this may take few minutes...")
 #Merge files
 raw_count_table = reduce(lambda left, right: pd.merge(left, right, on=['gene_id'], how='left'), raw_count.values())
 tpm_count_table = reduce(lambda left, right: pd.merge(left, right, on=['gene_id'], how='left'), tpm_clinical.values())
 	
-
 
 #Function to recover genes of interest 
 def tpmoverview (dataframe):
@@ -158,7 +180,7 @@ def tpmoverview (dataframe):
 
 	return(dataframe)
 
-#Select only the genes we are interested in
+#Select only the genes we are interested on
 tpm_merge_ensmblcode = tpmoverview(tpm_count_table)
 
 
