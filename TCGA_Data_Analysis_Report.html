@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TCGA Data Analysis Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: auto; }
+        img { width: 100%; height: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>TCGA Data Analysis Report</h1>
+    
+    <h2>1.1 Project Overview</h2>
+    
+    Content unavailable at this time.
+    
+    
+    <h2>1.2 Clinical Data Summary</h2>
+    
+    Content unavailable at this time.
+    
+    
+    <h2>2.1 Distribution of TPMs Expression</h2>
+    
+    This table provides an overview of the project.
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>TRO</th>
+      <th>NDN</th>
+      <th>NSMCE3</th>
+      <th>MAGEC2</th>
+      <th>MAGEB2</th>
+      <th>MAGED2</th>
+      <th>MAGEB4</th>
+      <th>MAGEA9</th>
+      <th>MAGEA10</th>
+      <th>TRIM28</th>
+      <th>MAGEA4</th>
+      <th>MAGED4</th>
+      <th>MAGEC1</th>
+      <th>MAGEA8</th>
+      <th>MAGEC3</th>
+      <th>MAGEB6</th>
+      <th>MAGEB18</th>
+      <th>MAGEF1</th>
+      <th>MAGEB10</th>
+      <th>MAGED1</th>
+      <th>MAGEB17</th>
+      <th>MAGEA2B</th>
+      <th>MAGEA11</th>
+      <th>MAGEE2</th>
+      <th>MAGED4B</th>
+      <th>MAGEH1</th>
+      <th>MAGEB5</th>
+      <th>MAGEB16</th>
+      <th>MAGEA6</th>
+      <th>MAGEA1</th>
+      <th>MAGEB3</th>
+      <th>CSAG1</th>
+      <th>MAGEE1</th>
+      <th>MAGEA12</th>
+      <th>MAGEB1</th>
+      <th>MAGEA3</th>
+      <th>MAGEA7P</th>
+      <th>MAGEA5</th>
+      <th>CSAG4</th>
+      <th>MAGEL2</th>
+      <th>MAGEA9B</th>
+      <th>MAGEA2</th>
+      <th>CSAG2</th>
+      <th>CSAG3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+      <td>169.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>34.700905</td>
+      <td>67.906123</td>
+      <td>21.505401</td>
+      <td>1.376357</td>
+      <td>0.051341</td>
+      <td>332.688191</td>
+      <td>0.001377</td>
+      <td>0.016925</td>
+      <td>0.008455</td>
+      <td>262.901669</td>
+      <td>0.094802</td>
+      <td>2.262738</td>
+      <td>0.221644</td>
+      <td>0.046152</td>
+      <td>0.201692</td>
+      <td>0.027966</td>
+      <td>0.002093</td>
+      <td>141.682017</td>
+      <td>0.001782</td>
+      <td>279.355365</td>
+      <td>0.471133</td>
+      <td>0.003592</td>
+      <td>0.015346</td>
+      <td>4.351368</td>
+      <td>2.573648</td>
+      <td>139.747415</td>
+      <td>0.001207</td>
+      <td>0.002446</td>
+      <td>0.121617</td>
+      <td>0.199083</td>
+      <td>0.007295</td>
+      <td>4.165973</td>
+      <td>9.369963</td>
+      <td>1.349696</td>
+      <td>0.010230</td>
+      <td>0.165129</td>
+      <td>0.004552</td>
+      <td>0.001862</td>
+      <td>0.077508</td>
+      <td>3.807359</td>
+      <td>0.137654</td>
+      <td>0.003274</td>
+      <td>0.144398</td>
+      <td>0.442263</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>24.909444</td>
+      <td>75.354135</td>
+      <td>6.276264</td>
+      <td>10.909120</td>
+      <td>0.178642</td>
+      <td>148.870570</td>
+      <td>0.006667</td>
+      <td>0.139242</td>
+      <td>0.044131</td>
+      <td>112.424443</td>
+      <td>1.108619</td>
+      <td>1.567896</td>
+      <td>1.721479</td>
+      <td>0.116585</td>
+      <td>0.278890</td>
+      <td>0.085592</td>
+      <td>0.012322</td>
+      <td>52.084861</td>
+      <td>0.008144</td>
+      <td>102.479218</td>
+      <td>0.504943</td>
+      <td>0.016896</td>
+      <td>0.064851</td>
+      <td>5.108593</td>
+      <td>1.524110</td>
+      <td>78.654196</td>
+      <td>0.011347</td>
+      <td>0.010697</td>
+      <td>0.280785</td>
+      <td>1.594906</td>
+      <td>0.025447</td>
+      <td>2.944719</td>
+      <td>7.831843</td>
+      <td>0.973297</td>
+      <td>0.025068</td>
+      <td>0.640966</td>
+      <td>0.019571</td>
+      <td>0.014376</td>
+      <td>0.108612</td>
+      <td>6.612708</td>
+      <td>1.708135</td>
+      <td>0.011815</td>
+      <td>1.024924</td>
+      <td>2.377070</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>6.625700</td>
+      <td>2.160300</td>
+      <td>8.817000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>151.831300</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>67.721500</td>
+      <td>0.000000</td>
+      <td>0.300200</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>51.423400</td>
+      <td>0.000000</td>
+      <td>79.199100</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.029700</td>
+      <td>0.328300</td>
+      <td>7.442900</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.209200</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.125500</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>19.840000</td>
+      <td>11.473100</td>
+      <td>17.419100</td>
+      <td>0.034000</td>
+      <td>0.000000</td>
+      <td>258.648100</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>177.140100</td>
+      <td>0.000000</td>
+      <td>1.216400</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.040300</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>106.057900</td>
+      <td>0.000000</td>
+      <td>202.912700</td>
+      <td>0.171600</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.316900</td>
+      <td>1.441700</td>
+      <td>84.592300</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.940100</td>
+      <td>4.295900</td>
+      <td>0.648000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.169100</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>30.460900</td>
+      <td>49.025000</td>
+      <td>21.318500</td>
+      <td>0.076200</td>
+      <td>0.000000</td>
+      <td>304.957300</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>249.135300</td>
+      <td>0.000000</td>
+      <td>2.007400</td>
+      <td>0.019700</td>
+      <td>0.029500</td>
+      <td>0.107900</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>131.516500</td>
+      <td>0.000000</td>
+      <td>267.814800</td>
+      <td>0.323400</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>3.005000</td>
+      <td>2.304800</td>
+      <td>130.165300</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.043800</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>3.389300</td>
+      <td>8.369100</td>
+      <td>1.146200</td>
+      <td>0.000000</td>
+      <td>0.040300</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>2.394000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.080900</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>40.820400</td>
+      <td>111.650800</td>
+      <td>24.422800</td>
+      <td>0.181000</td>
+      <td>0.052100</td>
+      <td>358.003300</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>325.502600</td>
+      <td>0.000000</td>
+      <td>2.956400</td>
+      <td>0.049100</td>
+      <td>0.059300</td>
+      <td>0.260600</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>174.568300</td>
+      <td>0.000000</td>
+      <td>353.775100</td>
+      <td>0.631800</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>6.758600</td>
+      <td>3.475800</td>
+      <td>175.202600</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.092600</td>
+      <td>0.049000</td>
+      <td>0.000000</td>
+      <td>5.678800</td>
+      <td>12.260100</td>
+      <td>1.752800</td>
+      <td>0.000000</td>
+      <td>0.095800</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.111100</td>
+      <td>3.604200</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.060800</td>
+      <td>0.220500</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>210.250400</td>
+      <td>713.482600</td>
+      <td>43.004700</td>
+      <td>137.858300</td>
+      <td>2.162600</td>
+      <td>1327.617000</td>
+      <td>0.037100</td>
+      <td>1.334800</td>
+      <td>0.457900</td>
+      <td>728.133100</td>
+      <td>14.410900</td>
+      <td>14.655400</td>
+      <td>21.838400</td>
+      <td>1.427200</td>
+      <td>1.929600</td>
+      <td>0.706400</td>
+      <td>0.110300</td>
+      <td>417.661300</td>
+      <td>0.052100</td>
+      <td>671.232200</td>
+      <td>3.861000</td>
+      <td>0.183400</td>
+      <td>0.719000</td>
+      <td>30.081400</td>
+      <td>8.634100</td>
+      <td>456.644900</td>
+      <td>0.125100</td>
+      <td>0.073700</td>
+      <td>2.581600</td>
+      <td>20.532100</td>
+      <td>0.213300</td>
+      <td>18.124600</td>
+      <td>62.195800</td>
+      <td>5.693000</td>
+      <td>0.166400</td>
+      <td>6.552200</td>
+      <td>0.120600</td>
+      <td>0.143900</td>
+      <td>0.604300</td>
+      <td>68.194500</td>
+      <td>22.202800</td>
+      <td>0.080900</td>
+      <td>12.231800</td>
+      <td>30.063700</td>
+    </tr>
+  </tbody>
+</table>
+    
+    
+    <h2>2.2 Type1 Gene Histograms</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240328_TCGA_GBM_Output/240328_TCGA_GBM_Overview/240328_TCGA_GBM_Plots/type1_TPM_Expression_histogram.png" alt="2.2 Type1 Gene Histograms">
+    
+    
+    <h2>2.3 Type2 Gene Histograms</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240328_TCGA_GBM_Output/240328_TCGA_GBM_Overview/240328_TCGA_GBM_Plots/type2_TPM_Expression_histogram.png" alt="2.3 Type2 Gene Histograms">
+    
+    
+    <h2>2.4 Composition of Positive and Negative Tumors by MAGEs</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240328_TCGA_GBM_Output/240328_TCGA_GBM_Overview/240328_TCGA_GBM_Plots/MAGE_PosNeg_Composition.png" alt="2.4 Composition of Positive and Negative Tumors by MAGEs">
+    
+    
+    <h2>3.1 Correlation Analysis Summary</h2>
+    
+    <img src="Content unavailable at this time." alt="3.1 Correlation Analysis Summary">
+    
+    
+    <h2>3.2 Correlation Graph</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240328_TCGA_GBM_Output/240328_TCGA_GBM_Overview/240328_TCGA_GBM_Plots/MAGE_PearsonCorrelation_heatmap.png" alt="3.2 Correlation Graph">
+    
+    
+    <h2>3.3 Top 10 Correlation Genes</h2>
+    
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 1</th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>MAGEA1</th>
+      <td>MAGEA4</td>
+      <td>0.985519</td>
+    </tr>
+    <tr>
+      <th>MAGEA4</th>
+      <td>MAGEC2</td>
+      <td>0.968048</td>
+    </tr>
+    <tr>
+      <th>MAGEA1</th>
+      <td>MAGEC2</td>
+      <td>0.959018</td>
+    </tr>
+    <tr>
+      <th>CSAG2</th>
+      <td>CSAG3</td>
+      <td>0.934754</td>
+    </tr>
+    <tr>
+      <th>MAGEA12</th>
+      <td>CSAG1</td>
+      <td>0.907400</td>
+    </tr>
+    <tr>
+      <th>MAGEA11</th>
+      <td>MAGEC2</td>
+      <td>0.841618</td>
+    </tr>
+    <tr>
+      <th>MAGEA4</th>
+      <td>MAGEA11</td>
+      <td>0.838770</td>
+    </tr>
+    <tr>
+      <th>MAGED4</th>
+      <td>MAGED4B</td>
+      <td>0.835517</td>
+    </tr>
+    <tr>
+      <th>MAGEA1</th>
+      <td>MAGEA11</td>
+      <td>0.829848</td>
+    </tr>
+    <tr>
+      <th>MAGEA2B</th>
+      <td>MAGEA9B</td>
+      <td>0.822867</td>
+    </tr>
+  </tbody>
+</table>
+    
+    
+    <h2>3.4 Bottom 10 Correlation Genes</h2>
+    
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 1</th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>MAGEC3</th>
+      <td>NSMCE3</td>
+      <td>-0.207710</td>
+    </tr>
+    <tr>
+      <th>MAGEC3</th>
+      <td>CSAG1</td>
+      <td>-0.170379</td>
+    </tr>
+    <tr>
+      <th>MAGEB2</th>
+      <td>NSMCE3</td>
+      <td>-0.150764</td>
+    </tr>
+    <tr>
+      <th>MAGEE1</th>
+      <td>NSMCE3</td>
+      <td>-0.149634</td>
+    </tr>
+    <tr>
+      <th>MAGEA12</th>
+      <td>MAGEC3</td>
+      <td>-0.143343</td>
+    </tr>
+    <tr>
+      <th>MAGEA12</th>
+      <td>MAGEL2</td>
+      <td>-0.141139</td>
+    </tr>
+    <tr>
+      <th>CSAG1</th>
+      <td>MAGEL2</td>
+      <td>-0.138224</td>
+    </tr>
+    <tr>
+      <th>CSAG1</th>
+      <td>MAGED1</td>
+      <td>-0.137578</td>
+    </tr>
+    <tr>
+      <th>CSAG1</th>
+      <td>MAGEE1</td>
+      <td>-0.134939</td>
+    </tr>
+    <tr>
+      <th>MAGEB6</th>
+      <td>CSAG4</td>
+      <td>-0.129655</td>
+    </tr>
+  </tbody>
+</table>
+    
+    
+    <h2>4.1 Cutoff Generation Summary</h2>
+    
+    Content unavailable at this time.
+    
+    
+    <h2>4.2 Expression Class Graph</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240328_TCGA_GBM_Output/240328_TCGA_GBM_Overview/240328_TCGA_GBM_Plots/240328_TCGA_GBM_Cutoff/Cutoff_Generation_['MAGEA11']-gene_barplot.png" alt="4.2 Expression Class Graph">
+    
+    
+    <h2>4.3 Heatmap</h2>
+    
+    <img src="Content unavailable at this time." alt="4.3 Heatmap">
+    
+    
+    <h2>4.4 Kaplan-Meier Graph</h2>
+    
+    <img src="/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240328_TCGA_GBM_Output/240328_TCGA_GBM_Overview/240328_TCGA_GBM_Plots/Kaplan-Meier.png" alt="4.4 Kaplan-Meier Graph">
+    
+    
+    <h2>5.1 Deseq Summary</h2>
+    
+    Content unavailable at this time.
+    
+    
+</div>
+</body>
+</html>
