@@ -108,7 +108,7 @@ tpm_clinical={}
 raw_count={}
 # Initialize an empty list to keep track of skipped files
 skipped_files = []
-for filename in os.listdir(path):
+for filename in files_to_merge:
     # Skip .DS_Store files
     if filename == '.DS_Store':
         skipped_files.append(filename)
@@ -118,7 +118,7 @@ for filename in os.listdir(path):
         # Load each file
         filename = filename.strip('\n')
         tcga_file = pd.read_csv(path + filename, header=None)
-        
+        tcga_file = tcga_file.iloc[6:]
         # Ensure the data is treated as strings for processing
         tcga_file[0] = tcga_file[0].astype(str)
         
@@ -136,7 +136,6 @@ for filename in os.listdir(path):
         tcga_file = split_columns
         tcga_file.columns = headers
 
-        tcga_file = tcga_file.iloc[2:]
 
         # Processing data specific to your needs
         tcga_file = tcga_file[['gene_id', 'unstranded', 'tpm_unstranded']]
@@ -190,15 +189,10 @@ tpm_merge_ensmblcode = tpm_merge_ensmblcode.T
 tpm_merge_ensmblcode = tpm_merge_ensmblcode.reset_index()
 codes = tpm_merge_ensmblcode['index']
 
-new_id = []
-for x in codes:
-    z = x.split('_normal')
-    y = z[0].split('-')
-    change = y[0] + '-' + y[1] + '-' + y[2]
-    new_id.append(change)
+
 
 #modify the sample ID (delete the number of the replicate) to match with the ID in the clinical file
-tpm_merge_ensmblcode['sample'] = new_id
+tpm_merge_ensmblcode['sample'] = codes
 tpm_merge_ensmblcode = tpm_merge_ensmblcode.drop(['index'], axis=1)
 first_column = tpm_merge_ensmblcode.pop('sample')
 tpm_merge_ensmblcode.insert(0, 'sample', first_column)
