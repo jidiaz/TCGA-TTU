@@ -6,5 +6,6 @@
     "output_path": "/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/Test2/",
     "tpm_clinical_file_path": "/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/Test2/240328_TCGA-PAAD/240328_TCGA-PAAD_tpm_clinical.csv",
     "raw_counts_file_path": "/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/Test2/240328_TCGA-PAAD/240328_TCGA-PAAD_raw-counts.csv",
-    "overview_directory": "/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240328_TCGA_GBM_Output/240328_TCGA_GBM_Overview"
+    "overview_directory": "/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240403_TCGA_GBM_Output/240403_TCGA_GBM_Overview",
+    "deseq_directory":"/Users/dtejeda/Documents/GitHub/TCGA-TTU/TC3R/240403_TCGA_GBM_Output/240403_TCGA_GBM_DEA"
 }
