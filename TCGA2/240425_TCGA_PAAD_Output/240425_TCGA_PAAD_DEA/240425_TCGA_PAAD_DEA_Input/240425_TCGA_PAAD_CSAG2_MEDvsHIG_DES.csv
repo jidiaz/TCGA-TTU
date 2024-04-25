@@ -1,0 +1,16 @@
+sample,condition
+TCGA-2L-AAQI-01A,Control
+TCGA-2L-AAQJ-01A,Control
+TCGA-F2-A7TX-01A,Control
+TCGA-FB-A7DR-01A,Control
+TCGA-FB-AAPY-01A,Control
+TCGA-FB-AAQ3-01A,Control
+TCGA-HZ-7926-01A,Control
+TCGA-IB-7644-01A,Control
+TCGA-IB-7654-01A,Control
+TCGA-IB-AAUO-01A,Control
+TCGA-FB-AAQ0-01A,Treatment
+TCGA-H6-A45N-01A,Treatment
+TCGA-HZ-8637-01A,Treatment
+TCGA-LB-A7SX-01A,Treatment
+TCGA-US-A77J-01A,Treatment
