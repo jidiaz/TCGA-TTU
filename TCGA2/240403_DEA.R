@@ -34,23 +34,21 @@ library(igraph)
 # csv_file <- args[1]
 # comparisons <- read.csv(file=csv_file)
 
-comparisons <- read.csv(file="/Users/juansola/Desktop/wetransfer_deseq2rev_2024-04-25_2027/directory_mapping_copy.csv")
-for (x in comparisons){
-current_line <- strsplit(x, split = ",")
-name=info[[1]][2]
+comparisons <- read.csv(file="/Documents and Settings/TTUSVM/Documents/TCGA2/240425_TCGA_CPTAC3_Output/240425_TCGA_CPTAC3_DEA/240425_TCGA_CPTAC3_DEA_Input/directory_mapping.csv")
+for (x in 1:nrow(comparisons)) {
+current_line <- comparisons[x,]
+name=current_line[,4]
 name=strsplit(name, split = "/")
 name=strsplit(name[[1]][length(name[[1]])], split = "_RAW.csv")
 
+# path to your raw count file
+raw_count_file=current_line[,4]
 
-#change X with the complete path to your raw count file
-raw_count_file=info[[1]][2]
-
-#change X with the complete path to your condition file
-condition_file=info[[1]][1]
+#path to your condition file
+condition_file=current_line[,3]
 
 #specify where to save the output
-output_path = info[[1]][3]
-
+output_path=paste(current_line[,5], "/", sep="")
 #name of the output files
 name=name[[1]][1]
 
