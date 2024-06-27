@@ -1,0 +1,5 @@
+Parameter,MAGEA8
+TPM Positive/Negative threshold,0.0
+log10(TPM+1) Positive/Negative threshold,0.0
+Optimal cutoff value,0.1355054796388892
+Normalized,0.055189234347203
